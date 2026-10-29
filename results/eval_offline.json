@@ -1,0 +1,1979 @@
+{
+ "metrics": {
+  "engine": "offline rules",
+  "inquiries": 30,
+  "intent_accuracy": 0.9,
+  "intent_macro_f1": 0.91,
+  "service_line_micro_f1": 0.846,
+  "urgency_accuracy_on_leads": 1.0,
+  "budget_accuracy_on_leads": 1.0,
+  "spam_f1": 1.0,
+  "median_latency_ms": 0
+ },
+ "mistakes": [
+  "#5: services ['software_dev', 'product_tenantease'] (expected ['product_tenantease'])",
+  "#9: intent support (expected client_project)",
+  "#11: services ['software_dev', 'cloud'] (expected ['cloud'])",
+  "#13: intent job_application (expected client_project); services ['software_dev'] (expected ['product_studio'])",
+  "#22: intent support (expected client_project); services ['ai_automation', 'software_dev'] (expected ['ai_automation'])",
+  "#25: services ['ai_automation', 'software_dev', 'product_tenantease'] (expected ['product_tenantease'])",
+  "#29: services ['ai_automation'] (expected [])"
+ ],
+ "outputs": [
+  {
+   "id": 1,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "Hi, I am the owner of Shree Ram Dental Clinic in Malviya Nagar.",
+     "company": "Shree Ram Dental Clinic",
+     "industry": "healthcare",
+     "requirements": [
+      "Can you build a WhatsApp bot that books appointments and sends reminders?",
+      "Budget around 1.5 lakh, want it live in 3 weeks."
+     ],
+     "budget_text": "1.5 lakh",
+     "budget_inr": 150000,
+     "timeline": "in 3 weeks",
+     "urgency": "high",
+     "decision_maker": true,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about AI automation. We have done similar work before, for example WizHealth: AI diagnostic triage. The next step is a short discovery call to understand your requirements.\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 91,
+    "score_reasons": [
+     "new client project: +30",
+     "budget Rs 1-5 lakh: +18",
+     "needs it soon: +12",
+     "writes as a decision maker: +10",
+     "company named: +5",
+     "2 concrete requirement(s): +8",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P1 - hot",
+    "route_to": "Sales / solutions team + AI solutions",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 7.98
+     },
+     {
+      "id": "svc-voice",
+      "type": "service",
+      "title": "AI voice agents",
+      "score": 6.77
+     },
+     {
+      "id": "cs-wizhealth",
+      "type": "case_study",
+      "title": "WizHealth: AI diagnostic triage",
+      "score": 5.38
+     },
+     {
+      "id": "cs-pragya",
+      "type": "case_study",
+      "title": "Pragya Health: IoT remote patient monitoring",
+      "score": 4.56
+     },
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 2.58
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 3
+   }
+  },
+  {
+   "id": 2,
+   "result": {
+    "analysis": {
+     "intent": "internship",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "Hello team, I want to apply for the BitElevate internship in the AI & Vector Intelligence lab.",
+     "company": "",
+     "industry": "education",
+     "requirements": [
+      "Hello team, I want to apply for the BitElevate internship in the AI & Vector Intelligence lab."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThank you for your interest in learning with Cynbit. Our BitElevate programme is a 60-day remote internship where you build real projects and ship one pull request a day across six tracks. You can see the tracks and enrol at cynbit.in/bitelevate. Tell us which track interests you and we will guide you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (internship)"
+    ],
+    "priority": "-",
+    "route_to": "BitElevate admissions",
+    "sla": "Auto-reply, no human needed",
+    "context": [
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 21.28
+     },
+     {
+      "id": "prod-studio",
+      "type": "product",
+      "title": "Cynbit Studio (career intelligence)",
+      "score": 7.6
+     },
+     {
+      "id": "svc-aistack",
+      "type": "service",
+      "title": "AI stack integration",
+      "score": 4.18
+     },
+     {
+      "id": "cs-econtentprep",
+      "type": "case_study",
+      "title": "EContentPrep: adaptive learning",
+      "score": 3.46
+     },
+     {
+      "id": "svc-funnel",
+      "type": "service",
+      "title": "Funnel optimization",
+      "score": 3.24
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 3,
+   "result": {
+    "analysis": {
+     "intent": "spam",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "Dear Sir/Madam, we are a leading SEO company and we can increase your website traffic 10x with our backlink packages starting at $99.",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "$99",
+     "budget_inr": 8316,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": ""
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (spam)"
+    ],
+    "priority": "-",
+    "route_to": "Archive",
+    "sla": "No reply",
+    "context": [
+     {
+      "id": "svc-seo",
+      "type": "service",
+      "title": "Technical SEO",
+      "score": 7.47
+     },
+     {
+      "id": "cs-trendmart",
+      "type": "case_study",
+      "title": "TrendMart: hyper-local SEO",
+      "score": 4.56
+     },
+     {
+      "id": "svc-backend",
+      "type": "service",
+      "title": "Backend systems",
+      "score": 3.18
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.79
+     },
+     {
+      "id": "cs-evento",
+      "type": "case_study",
+      "title": "Evento: scaled ticketing platform",
+      "score": 2.58
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 4,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "product_revio"
+     ],
+     "summary": "We run 6 restaurants across Jaipur and Udaipur under Wild Spice Group.",
+     "company": "",
+     "industry": "hospitality",
+     "requirements": [
+      "Need a tool to manage reviews for all branches."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": true,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "timeline / launch date",
+      "company name and website"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "When would you like this to be live, and is there a fixed deadline?",
+      "Could you share your company name and current website, if any?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Revio. We have done similar work before, for example Wild Basil: supply-chain transparency. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- When would you like this to be live, and is there a fixed deadline?\n- Could you share your company name and current website, if any?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 52,
+    "score_reasons": [
+     "new client project: +30",
+     "writes as a decision maker: +10",
+     "1 concrete requirement(s): +4",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + Revio product",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 14.17
+     },
+     {
+      "id": "cs-wildbasil",
+      "type": "case_study",
+      "title": "Wild Basil: supply-chain transparency",
+      "score": 7.1
+     },
+     {
+      "id": "svc-backend",
+      "type": "service",
+      "title": "Backend systems",
+      "score": 3.18
+     },
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 3.0
+     },
+     {
+      "id": "svc-cloud",
+      "type": "service",
+      "title": "Cloud infrastructure",
+      "score": 2.94
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 5,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "software_dev",
+      "product_tenantease"
+     ],
+     "summary": "Hamein apne PG ke liye software chahiye, 40 rooms hain, rent ka hisaab aur tenants ka record rakhna hai.",
+     "company": "",
+     "industry": "real estate",
+     "requirements": [
+      "Hamein apne PG ke liye software chahiye, 40 rooms hain, rent ka hisaab aur tenants ka record rakhna hai."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "hinglish",
+     "missing_info": [
+      "budget range",
+      "timeline / launch date",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "When would you like this to be live, and is there a fixed deadline?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Software development, TenantEase. We have done similar work before, for example TrendMart: hyper-local SEO. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- When would you like this to be live, and is there a fixed deadline?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 42,
+    "score_reasons": [
+     "new client project: +30",
+     "1 concrete requirement(s): +4",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P3 - nurture",
+    "route_to": "Sales / solutions team + Engineering, TenantEase product",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "prod-tenantease",
+      "type": "product",
+      "title": "TenantEase (property management)",
+      "score": 8.71
+     },
+     {
+      "id": "cs-trendmart",
+      "type": "case_study",
+      "title": "TrendMart: hyper-local SEO",
+      "score": 3.06
+     },
+     {
+      "id": "cs-sofiasa",
+      "type": "case_study",
+      "title": "Sofiasa: ERP modernization",
+      "score": 2.59
+     },
+     {
+      "id": "svc-legacy",
+      "type": "service",
+      "title": "Legacy migration",
+      "score": 2.33
+     },
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 1.52
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 6,
+   "result": {
+    "analysis": {
+     "intent": "support",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "Our website built by your team is down since morning and customers cannot place orders.",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "urgently",
+     "urgency": "high",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for letting us know. We have passed this to your project team, who will get back to you shortly. If it is blocking your users, reply with 'urgent' and a phone number.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (support)"
+    ],
+    "priority": "-",
+    "route_to": "Delivery / project manager",
+    "sla": "Reply within 2 working hours",
+    "context": [
+     {
+      "id": "svc-aistack",
+      "type": "service",
+      "title": "AI stack integration",
+      "score": 4.23
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.79
+     },
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 2.58
+     },
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 2.49
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 7,
+   "result": {
+    "analysis": {
+     "intent": "job_application",
+     "service_lines": [],
+     "summary": "I have 2 years of experience as a React developer and I am looking for a job opportunity at Cynbit.",
+     "company": "Cynbit. Attaching",
+     "industry": "",
+     "requirements": [
+      "I have 2 years of experience as a React developer and I am looking for a job opportunity at Cynbit."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThank you for your interest in working with Cynbit. Please apply for the open role on cynbit.in/careers so our team can review your profile and share the next step.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (job_application)"
+    ],
+    "priority": "-",
+    "route_to": "HR / talent",
+    "sla": "Auto-reply, add to the careers pipeline",
+    "context": [
+     {
+      "id": "prod-studio",
+      "type": "product",
+      "title": "Cynbit Studio (career intelligence)",
+      "score": 8.47
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.79
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 8,
+   "result": {
+    "analysis": {
+     "intent": "partnership",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "We are a Pune based design agency and want to partner with you for white-label development of our clients' web apps.",
+     "company": "",
+     "industry": "",
+     "requirements": [
+      "We are a Pune based design agency and want to partner with you for white-label development of our clients' web apps."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for reaching out about working together. Could you share a short note on your company, the kind of projects you have in mind and how you see the partnership working? We will set up a call with the right person.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (partnership)"
+    ],
+    "priority": "-",
+    "route_to": "Founders' office",
+    "sla": "Reply within 2 working days",
+    "context": [
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 8.13
+     },
+     {
+      "id": "svc-backend",
+      "type": "service",
+      "title": "Backend systems",
+      "score": 4.46
+     },
+     {
+      "id": "cs-marketingaddict",
+      "type": "case_study",
+      "title": "Marketing Addict: AI campaign optimization",
+      "score": 3.31
+     },
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 2.18
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 9,
+   "result": {
+    "analysis": {
+     "intent": "support",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "We are Kota Textiles Pvt Ltd, a manufacturer.",
+     "company": "",
+     "industry": "manufacturing",
+     "requirements": [
+      "We want AI to read the PDF invoices and push the data automatically."
+     ],
+     "budget_text": "rs 4 lakh",
+     "budget_inr": 400000,
+     "timeline": "timeline 2 months",
+     "urgency": "medium",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for letting us know. We have passed this to your project team, who will get back to you shortly. If it is blocking your users, reply with 'urgent' and a phone number.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (support)"
+    ],
+    "priority": "-",
+    "route_to": "Delivery / project manager",
+    "sla": "Reply within 2 working hours",
+    "context": [
+     {
+      "id": "svc-llm",
+      "type": "service",
+      "title": "LLM automation",
+      "score": 7.48
+     },
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 6.18
+     },
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 5.35
+     },
+     {
+      "id": "svc-aistack",
+      "type": "service",
+      "title": "AI stack integration",
+      "score": 4.76
+     },
+     {
+      "id": "cs-careplus",
+      "type": "case_study",
+      "title": "CarePlus Health: cloud migration",
+      "score": 3.75
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 10,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "Need an e-commerce website and Android app for my jewellery store with payment gateway.",
+     "company": "",
+     "industry": "retail / e-commerce",
+     "requirements": [
+      "Need an e-commerce website and Android app for my jewellery store with payment gateway."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "before diwali",
+     "urgency": "medium",
+     "decision_maker": true,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Software development. We have done similar work before, for example EliteVogue: headless commerce. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 52,
+    "score_reasons": [
+     "new client project: +30",
+     "timeline within ~3 months: +8",
+     "writes as a decision maker: +10",
+     "1 concrete requirement(s): +4"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + Engineering",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 14.96
+     },
+     {
+      "id": "cs-elitevogue",
+      "type": "case_study",
+      "title": "EliteVogue: headless commerce",
+      "score": 8.83
+     },
+     {
+      "id": "cs-urbanwardrobe",
+      "type": "case_study",
+      "title": "Urban Wardrobe: AR virtual try-on",
+      "score": 6.7
+     },
+     {
+      "id": "cs-globalpay",
+      "type": "case_study",
+      "title": "GlobalPay: cross-border payments",
+      "score": 4.16
+     },
+     {
+      "id": "svc-legacy",
+      "type": "service",
+      "title": "Legacy migration",
+      "score": 2.69
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 11,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "software_dev",
+      "cloud"
+     ],
+     "summary": "Our on-premise servers are old and we want to move our ERP to AWS with zero downtime.",
+     "company": "",
+     "industry": "healthcare",
+     "requirements": [
+      "Our on-premise servers are old and we want to move our ERP to AWS with zero downtime."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "timeline / launch date",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "When would you like this to be live, and is there a fixed deadline?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Software development, Cloud & migration. We have done similar work before, for example CarePlus Health: cloud migration. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- When would you like this to be live, and is there a fixed deadline?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 34,
+    "score_reasons": [
+     "new client project: +30",
+     "1 concrete requirement(s): +4"
+    ],
+    "priority": "P3 - nurture",
+    "route_to": "Sales / solutions team + Engineering, Cloud & DevOps",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "cs-careplus",
+      "type": "case_study",
+      "title": "CarePlus Health: cloud migration",
+      "score": 8.62
+     },
+     {
+      "id": "svc-cloud",
+      "type": "service",
+      "title": "Cloud infrastructure",
+      "score": 8.33
+     },
+     {
+      "id": "svc-legacy",
+      "type": "service",
+      "title": "Legacy migration",
+      "score": 5.93
+     },
+     {
+      "id": "cs-sofiasa",
+      "type": "case_study",
+      "title": "Sofiasa: ERP modernization",
+      "score": 4.9
+     },
+     {
+      "id": "cs-wizhealth",
+      "type": "case_study",
+      "title": "WizHealth: AI diagnostic triage",
+      "score": 2.69
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 12,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "digital_marketing"
+     ],
+     "summary": "Please run Google ads and Instagram campaigns for our coaching institute, we want more student admissions this season.",
+     "company": "",
+     "industry": "education",
+     "requirements": [
+      "Please run Google ads and Instagram campaigns for our coaching institute, we want more student admissions this season."
+     ],
+     "budget_text": "50k",
+     "budget_inr": 50000,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "timeline / launch date",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "When would you like this to be live, and is there a fixed deadline?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Digital marketing. We have done similar work before, for example EContentPrep: adaptive learning. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- When would you like this to be live, and is there a fixed deadline?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 42,
+    "score_reasons": [
+     "new client project: +30",
+     "small budget stated: +8",
+     "1 concrete requirement(s): +4"
+    ],
+    "priority": "P3 - nurture",
+    "route_to": "Sales / solutions team + Growth & marketing",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-ads",
+      "type": "service",
+      "title": "Performance ads",
+      "score": 16.29
+     },
+     {
+      "id": "cs-econtentprep",
+      "type": "case_study",
+      "title": "EContentPrep: adaptive learning",
+      "score": 8.81
+     },
+     {
+      "id": "cs-marketingaddict",
+      "type": "case_study",
+      "title": "Marketing Addict: AI campaign optimization",
+      "score": 6.83
+     },
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 2.23
+     },
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 2.14
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 13,
+   "result": {
+    "analysis": {
+     "intent": "job_application",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "I am the Training and Placement Officer at a university in Jaipur.",
+     "company": "",
+     "industry": "education",
+     "requirements": [
+      "We want a platform for mock interviews, coding assessments and resume building for 2,000 final year students."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThank you for your interest in working with Cynbit. Please apply for the open role on cynbit.in/careers so our team can review your profile and share the next step.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (job_application)"
+    ],
+    "priority": "-",
+    "route_to": "HR / talent",
+    "sla": "Auto-reply, add to the careers pipeline",
+    "context": [
+     {
+      "id": "prod-studio",
+      "type": "product",
+      "title": "Cynbit Studio (career intelligence)",
+      "score": 26.55
+     },
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 3.29
+     },
+     {
+      "id": "cs-evento",
+      "type": "case_study",
+      "title": "Evento: scaled ticketing platform",
+      "score": 3.23
+     },
+     {
+      "id": "cs-econtentprep",
+      "type": "case_study",
+      "title": "EContentPrep: adaptive learning",
+      "score": 2.33
+     },
+     {
+      "id": "svc-seo",
+      "type": "service",
+      "title": "Technical SEO",
+      "score": 2.1
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 14,
+   "result": {
+    "analysis": {
+     "intent": "spam",
+     "service_lines": [],
+     "summary": "You have won a lottery of $1,000,000.",
+     "company": "",
+     "industry": "finance",
+     "requirements": [],
+     "budget_text": "$1000000",
+     "budget_inr": 84000000,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": ""
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (spam)"
+    ],
+    "priority": "-",
+    "route_to": "Archive",
+    "sla": "No reply",
+    "context": [],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 15,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "Can you build an AI voice agent that calls our customers in Hindi to remind them about EMI due dates?",
+     "company": "",
+     "industry": "",
+     "requirements": [
+      "Can you build an AI voice agent that calls our customers in Hindi to remind them about EMI due dates?"
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "asap",
+     "urgency": "high",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about AI automation. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 54,
+    "score_reasons": [
+     "new client project: +30",
+     "needs it soon: +12",
+     "1 concrete requirement(s): +4",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + AI solutions",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-voice",
+      "type": "service",
+      "title": "AI voice agents",
+      "score": 18.35
+     },
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 8.38
+     },
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 2.58
+     },
+     {
+      "id": "cs-marketingaddict",
+      "type": "case_study",
+      "title": "Marketing Addict: AI campaign optimization",
+      "score": 1.85
+     },
+     {
+      "id": "cs-wizhealth",
+      "type": "case_study",
+      "title": "WizHealth: AI diagnostic triage",
+      "score": 1.83
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 16,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "hi i want website",
+     "company": "",
+     "industry": "",
+     "requirements": [
+      "hi i want website"
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "timeline / launch date",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "When would you like this to be live, and is there a fixed deadline?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Software development. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- When would you like this to be live, and is there a fixed deadline?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 34,
+    "score_reasons": [
+     "new client project: +30",
+     "1 concrete requirement(s): +4"
+    ],
+    "priority": "P3 - nurture",
+    "route_to": "Sales / solutions team + Engineering",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.79
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 17,
+   "result": {
+    "analysis": {
+     "intent": "support",
+     "service_lines": [
+      "software_dev"
+     ],
+     "summary": "There is a login issue in the admin dashboard you delivered last month, managers are unable to sign in.",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for letting us know. We have passed this to your project team, who will get back to you shortly. If it is blocking your users, reply with 'urgent' and a phone number.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (support)"
+    ],
+    "priority": "-",
+    "route_to": "Delivery / project manager",
+    "sla": "Reply within 2 working hours",
+    "context": [
+     {
+      "id": "svc-funnel",
+      "type": "service",
+      "title": "Funnel optimization",
+      "score": 3.24
+     },
+     {
+      "id": "cs-evento",
+      "type": "case_study",
+      "title": "Evento: scaled ticketing platform",
+      "score": 3.12
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.31
+     },
+     {
+      "id": "prod-tenantease",
+      "type": "product",
+      "title": "TenantEase (property management)",
+      "score": 2.06
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 18,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "We have a SaaS product for gyms and want to add an AI assistant that answers member questions from our docs using RAG.",
+     "company": "",
+     "industry": "",
+     "requirements": [
+      "We have a SaaS product for gyms and want to add an AI assistant that answers member questions from our docs using RAG.",
+      "Budget $8k, need it in 6 weeks."
+     ],
+     "budget_text": "$8k",
+     "budget_inr": 672000,
+     "timeline": "in 6 weeks",
+     "urgency": "medium",
+     "decision_maker": true,
+     "language": "english",
+     "missing_info": [
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about AI automation. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 89,
+    "score_reasons": [
+     "new client project: +30",
+     "budget Rs 5 lakh or more: +25",
+     "timeline within ~3 months: +8",
+     "writes as a decision maker: +10",
+     "2 concrete requirement(s): +8",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P1 - hot",
+    "route_to": "Sales / solutions team + AI solutions",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-aistack",
+      "type": "service",
+      "title": "AI stack integration",
+      "score": 13.01
+     },
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 4.82
+     },
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 4.06
+     },
+     {
+      "id": "svc-voice",
+      "type": "service",
+      "title": "AI voice agents",
+      "score": 3.9
+     },
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 2.51
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 19,
+   "result": {
+    "analysis": {
+     "intent": "internship",
+     "service_lines": [],
+     "summary": "Is the BitElevate fee 3999 one-time?",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThank you for your interest in learning with Cynbit. Our BitElevate programme is a 60-day remote internship where you build real projects and ship one pull request a day across six tracks. You can see the tracks and enrol at cynbit.in/bitelevate. Tell us which track interests you and we will guide you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (internship)"
+    ],
+    "priority": "-",
+    "route_to": "BitElevate admissions",
+    "sla": "Auto-reply, no human needed",
+    "context": [
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 18.4
+     },
+     {
+      "id": "cs-cloudytales",
+      "type": "case_study",
+      "title": "Cloudy Tales: real-time collaboration",
+      "score": 3.74
+     },
+     {
+      "id": "cs-evento",
+      "type": "case_study",
+      "title": "Evento: scaled ticketing platform",
+      "score": 2.23
+     },
+     {
+      "id": "prod-studio",
+      "type": "product",
+      "title": "Cynbit Studio (career intelligence)",
+      "score": 2.0
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 20,
+   "result": {
+    "analysis": {
+     "intent": "partnership",
+     "service_lines": [],
+     "summary": "Hello, we are a recruitment firm and can provide you skilled developers on contract.",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for reaching out about working together. Could you share a short note on your company, the kind of projects you have in mind and how you see the partnership working? We will set up a call with the right person.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (partnership)"
+    ],
+    "priority": "-",
+    "route_to": "Founders' office",
+    "sla": "Reply within 2 working days",
+    "context": [],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 21,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "software_dev",
+      "digital_marketing"
+     ],
+     "summary": "Mujhe apni hotel ki website banwani hai aur Google pe ranking chahiye.",
+     "company": "",
+     "industry": "hospitality",
+     "requirements": [
+      "Mujhe apni hotel ki website banwani hai aur Google pe ranking chahiye."
+     ],
+     "budget_text": "60k",
+     "budget_inr": 60000,
+     "timeline": "1 mahine",
+     "urgency": "medium",
+     "decision_maker": false,
+     "language": "hinglish",
+     "missing_info": [
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Software development, Digital marketing. We have done similar work before, for example TrendMart: hyper-local SEO. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 50,
+    "score_reasons": [
+     "new client project: +30",
+     "small budget stated: +8",
+     "timeline within ~3 months: +8",
+     "1 concrete requirement(s): +4"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + Engineering, Growth & marketing",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-seo",
+      "type": "service",
+      "title": "Technical SEO",
+      "score": 4.84
+     },
+     {
+      "id": "cs-trendmart",
+      "type": "case_study",
+      "title": "TrendMart: hyper-local SEO",
+      "score": 4.47
+     },
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 4.32
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.79
+     },
+     {
+      "id": "svc-ads",
+      "type": "service",
+      "title": "Performance ads",
+      "score": 2.79
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 22,
+   "result": {
+    "analysis": {
+     "intent": "support",
+     "service_lines": [
+      "ai_automation",
+      "software_dev"
+     ],
+     "summary": "Our customer support team gets 500 emails a day.",
+     "company": "Jaipur. Budget",
+     "industry": "retail / e-commerce",
+     "requirements": [
+      "We want an AI agent that drafts replies and routes tickets, integrated with Zoho Desk."
+     ],
+     "budget_text": "3 lakh",
+     "budget_inr": 300000,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for letting us know. We have passed this to your project team, who will get back to you shortly. If it is blocking your users, reply with 'urgent' and a phone number.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (support)"
+    ],
+    "priority": "-",
+    "route_to": "Delivery / project manager",
+    "sla": "Reply within 2 working hours",
+    "context": [
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 11.38
+     },
+     {
+      "id": "cs-elitevogue",
+      "type": "case_study",
+      "title": "EliteVogue: headless commerce",
+      "score": 9.2
+     },
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 8.82
+     },
+     {
+      "id": "cs-urbanwardrobe",
+      "type": "case_study",
+      "title": "Urban Wardrobe: AR virtual try-on",
+      "score": 7.05
+     },
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 6.18
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 23,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "software_dev",
+      "cloud"
+     ],
+     "summary": "We want to modernize our 12 year old PHP inventory system into a cloud web app with a mobile app for the warehouse staff.",
+     "company": "",
+     "industry": "manufacturing",
+     "requirements": [
+      "We want to modernize our 12 year old PHP inventory system into a cloud web app with a mobile app for the warehouse staff.",
+      "Need it within 4 months."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "within 4 months",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Software development, Cloud & migration. We have done similar work before, for example Sofiasa: ERP modernization. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 38,
+    "score_reasons": [
+     "new client project: +30",
+     "2 concrete requirement(s): +8"
+    ],
+    "priority": "P3 - nurture",
+    "route_to": "Sales / solutions team + Engineering, Cloud & DevOps",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-legacy",
+      "type": "service",
+      "title": "Legacy migration",
+      "score": 13.82
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 11.51
+     },
+     {
+      "id": "cs-sofiasa",
+      "type": "case_study",
+      "title": "Sofiasa: ERP modernization",
+      "score": 6.19
+     },
+     {
+      "id": "cs-careplus",
+      "type": "case_study",
+      "title": "CarePlus Health: cloud migration",
+      "score": 4.68
+     },
+     {
+      "id": "svc-cloud",
+      "type": "service",
+      "title": "Cloud infrastructure",
+      "score": 4.1
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 24,
+   "result": {
+    "analysis": {
+     "intent": "job_application",
+     "service_lines": [],
+     "summary": "Is there any opening for a QA tester position?",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThank you for your interest in working with Cynbit. Please apply for the open role on cynbit.in/careers so our team can review your profile and share the next step.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (job_application)"
+    ],
+    "priority": "-",
+    "route_to": "HR / talent",
+    "sla": "Auto-reply, add to the careers pipeline",
+    "context": [
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 2.12
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 25,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "ai_automation",
+      "software_dev",
+      "product_tenantease"
+     ],
+     "summary": "I own 3 rental buildings with 60 flats in Mansarovar.",
+     "company": "",
+     "industry": "real estate",
+     "requirements": [
+      "I own 3 rental buildings with 60 flats in Mansarovar.",
+      "I want automatic rent reminders and a dashboard."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "timeline / launch date",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "When would you like this to be live, and is there a fixed deadline?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about AI automation, Software development, TenantEase. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- When would you like this to be live, and is there a fixed deadline?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 46,
+    "score_reasons": [
+     "new client project: +30",
+     "2 concrete requirement(s): +8",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + AI solutions, Engineering, TenantEase product",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "prod-tenantease",
+      "type": "product",
+      "title": "TenantEase (property management)",
+      "score": 15.75
+     },
+     {
+      "id": "prog-bitelevate",
+      "type": "program",
+      "title": "BitElevate internship",
+      "score": 4.25
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 2.31
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 26,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "We are a school chain with 5 branches and want an AI system that predicts which students may fail and recommends extra practice.",
+     "company": "",
+     "industry": "education",
+     "requirements": [
+      "We are a school chain with 5 branches and want an AI system that predicts which students may fail and recommends extra practice."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "by next month",
+     "urgency": "medium",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "budget range",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about AI automation. We have done similar work before, for example EContentPrep: adaptive learning. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 50,
+    "score_reasons": [
+     "new client project: +30",
+     "timeline within ~3 months: +8",
+     "1 concrete requirement(s): +4",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + AI solutions",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 6.78
+     },
+     {
+      "id": "cs-econtentprep",
+      "type": "case_study",
+      "title": "EContentPrep: adaptive learning",
+      "score": 6.7
+     },
+     {
+      "id": "cs-wildbasil",
+      "type": "case_study",
+      "title": "Wild Basil: supply-chain transparency",
+      "score": 3.7
+     },
+     {
+      "id": "svc-backend",
+      "type": "service",
+      "title": "Backend systems",
+      "score": 3.2
+     },
+     {
+      "id": "cs-elitevogue",
+      "type": "case_study",
+      "title": "EliteVogue: headless commerce",
+      "score": 2.75
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 27,
+   "result": {
+    "analysis": {
+     "intent": "spam",
+     "service_lines": [
+      "digital_marketing"
+     ],
+     "summary": "Buy cheap Instagram followers and crypto signals, DM now!!!",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": ""
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (spam)"
+    ],
+    "priority": "-",
+    "route_to": "Archive",
+    "sla": "No reply",
+    "context": [
+     {
+      "id": "svc-ads",
+      "type": "service",
+      "title": "Performance ads",
+      "score": 3.12
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 28,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "digital_marketing"
+     ],
+     "summary": "We need a landing page and Meta ads funnel for our new skincare launch in 2 weeks.",
+     "company": "",
+     "industry": "",
+     "requirements": [
+      "We need a landing page and Meta ads funnel for our new skincare launch in 2 weeks."
+     ],
+     "budget_text": "1 lakh",
+     "budget_inr": 100000,
+     "timeline": "in 2 weeks",
+     "urgency": "high",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about Digital marketing. We have done similar work before, for example Marketing Addict: AI campaign optimization. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 64,
+    "score_reasons": [
+     "new client project: +30",
+     "budget Rs 1-5 lakh: +18",
+     "needs it soon: +12",
+     "1 concrete requirement(s): +4"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + Growth & marketing",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-funnel",
+      "type": "service",
+      "title": "Funnel optimization",
+      "score": 14.26
+     },
+     {
+      "id": "svc-ads",
+      "type": "service",
+      "title": "Performance ads",
+      "score": 8.15
+     },
+     {
+      "id": "cs-marketingaddict",
+      "type": "case_study",
+      "title": "Marketing Addict: AI campaign optimization",
+      "score": 2.75
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 29,
+   "result": {
+    "analysis": {
+     "intent": "support",
+     "service_lines": [
+      "ai_automation"
+     ],
+     "summary": "The invoice you sent for October has the wrong GST number, please correct it.",
+     "company": "",
+     "industry": "",
+     "requirements": [],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "",
+     "urgency": "low",
+     "decision_maker": false,
+     "language": "english",
+     "missing_info": [],
+     "discovery_questions": [],
+     "reply_draft": "Hi,\n\nThanks for letting us know. We have passed this to your project team, who will get back to you shortly. If it is blocking your users, reply with 'urgent' and a phone number.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 0,
+    "score_reasons": [
+     "not a sales lead (support)"
+    ],
+    "priority": "-",
+    "route_to": "Delivery / project manager",
+    "sla": "Reply within 2 working hours",
+    "context": [
+     {
+      "id": "svc-llm",
+      "type": "service",
+      "title": "LLM automation",
+      "score": 2.94
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  },
+  {
+   "id": 30,
+   "result": {
+    "analysis": {
+     "intent": "client_project",
+     "service_lines": [
+      "ai_automation",
+      "software_dev"
+     ],
+     "summary": "Hum ek logistics company hain, 50 trucks hain.",
+     "company": "",
+     "industry": "logistics",
+     "requirements": [
+      "Drivers ki location aur delivery status track karne ke liye app chahiye, aur customers ko automatic WhatsApp updates."
+     ],
+     "budget_text": "",
+     "budget_inr": 0,
+     "timeline": "jaldi",
+     "urgency": "high",
+     "decision_maker": false,
+     "language": "hinglish",
+     "missing_info": [
+      "budget range",
+      "company name and website",
+      "detailed scope (users, features, integrations)"
+     ],
+     "discovery_questions": [
+      "What budget range have you set aside for this project?",
+      "Could you share your company name and current website, if any?",
+      "Who will use it, and which tools or systems should it connect to?"
+     ],
+     "reply_draft": "Hi,\n\nThank you for reaching out to Cynbit about AI automation, Software development. The next step is a short discovery call to understand your requirements. To make that call useful, it would help to know:\n- What budget range have you set aside for this project?\n- Could you share your company name and current website, if any?\n- Who will use it, and which tools or systems should it connect to?\n\nPlease reply with two time slots that suit you.\n\nBest regards,\nTeam Cynbit Technologies\nopportunities@cynbit.in"
+    },
+    "lead_score": 54,
+    "score_reasons": [
+     "new client project: +30",
+     "needs it soon: +12",
+     "1 concrete requirement(s): +4",
+     "fits Cynbit's AI / product focus: +8"
+    ],
+    "priority": "P2 - warm",
+    "route_to": "Sales / solutions team + AI solutions, Engineering",
+    "sla": "Reply within 4 working hours",
+    "context": [
+     {
+      "id": "svc-crm",
+      "type": "service",
+      "title": "CRM automation",
+      "score": 5.17
+     },
+     {
+      "id": "svc-agents",
+      "type": "service",
+      "title": "Autonomous AI agents",
+      "score": 4.98
+     },
+     {
+      "id": "svc-fullstack",
+      "type": "service",
+      "title": "Full-stack development",
+      "score": 3.37
+     },
+     {
+      "id": "svc-legacy",
+      "type": "service",
+      "title": "Legacy migration",
+      "score": 2.69
+     },
+     {
+      "id": "prod-revio",
+      "type": "product",
+      "title": "Revio (AI review assistant)",
+      "score": 2.18
+     }
+    ],
+    "engine": "offline rules",
+    "error": null,
+    "latency_ms": 0
+   }
+  }
+ ]
+}
